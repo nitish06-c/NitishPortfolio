@@ -346,7 +346,7 @@ section .title::after {
 /* Skills section styling */
 .skills {
   color: #333; /* Dark text color */
-  background: #87ceeb; /* Light gray background */
+  background: #a9a9a9; /* Light gray background */
   padding: 60px 0; /* Add padding to the top and bottom of the section */
 }
 
@@ -372,14 +372,14 @@ section .title::after {
 
 .skills .skills-content {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px; /* Add spacing between cards */
   justify-content: center; /* Center-align cards horizontally */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
 }
 
 .skills .skills-content .card {
-  flex: 1 1 calc(33% - 30px); /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
-  margin: 15px; /* Add margin around each card */
+  flex: 0 0 calc(33.33% - 30px); /* Each card takes up 1/3 of the row, minus the gap */
+  margin: 0; /* Remove margin to avoid extra space */
   background: #fff; /* White background color */
   border-radius: 8px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background color and shadow */
