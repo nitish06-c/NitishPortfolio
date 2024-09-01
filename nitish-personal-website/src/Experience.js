@@ -4,36 +4,40 @@ import './App.css'; // Import CSS for styling
 const Experience = () => {
   const experiences = [
     {
-      date: 'Jan 2022 - Present',
-      title: 'Software Engineer at Tech Innovators',
-      description: 'Developed scalable web applications, optimized performance, and integrated RESTful APIs.',
+      date: 'May 2023 - August 2024',
+      title: 'Software Engineer Intern',
+      description: [
+        {
+          project: 'Work Project 1',
+          details: ['Implemented backend services for data processing.', 'Developed automated testing tools to improve code reliability.'],
+        },
+        {
+          project: 'Work Project 2',
+          details: ['Collaborated on front-end development using React.', 'Refactored code for performance optimization.'],
+        },
+      ],
     },
     {
       date: 'Jul 2020 - Dec 2021',
       title: 'Frontend Developer at Creative Minds',
-      description: 'Designed and implemented user-friendly interfaces with React, Redux, and TypeScript.',
+      description: [
+        {
+          project: 'Work Project 1',
+          details: ['Designed responsive user interfaces using React and Redux.', 'Enhanced performance by optimizing components with TypeScript.'],
+        },
+        {
+          project: 'Work Project 2',
+          details: ['Led a team of developers to redesign the main product page.', 'Implemented new features for better user engagement.'],
+        },
+      ],
     },
-    {
-      date: 'Jan 2019 - Jun 2020',
-      title: 'Full Stack Developer at Global Solutions',
-      description: 'Built and maintained a microservices architecture for e-commerce platforms using Node.js and MongoDB.',
-    },
-    {
-      date: 'Sep 2017 - Dec 2018',
-      title: 'Junior Developer at Startup Hub',
-      description: 'Collaborated in a team to create MVPs for various startups and gained experience in Agile methodologies.',
-    },
-    {
-      date: 'Jun 2016 - Aug 2017',
-      title: 'Intern at Future Tech',
-      description: 'Worked on proof-of-concept projects in machine learning and data analysis.',
-    },
+    // Add more experiences here
   ];
 
   return (
     <section className="experience" id="experience">
       <div className="max-width">
-        <h2 className="title">Experience</h2>
+        <h2 className="title">Work Experience</h2>
         <div className="timeline">
           {experiences.map((experience, index) => (
             <div key={index} className="timeline-item">
@@ -41,7 +45,18 @@ const Experience = () => {
               <div className="timeline-date">{experience.date}</div>
               <div className="timeline-content">
                 <h3>{experience.title}</h3>
-                <p>{experience.description}</p>
+                <ul>
+                  {experience.description.map((item, idx) => (
+                    <li key={idx}>
+                      <strong>{item.project}:</strong>
+                      <ul>
+                        {item.details.map((detail, subIdx) => (
+                          <li key={subIdx}>- {detail}</li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

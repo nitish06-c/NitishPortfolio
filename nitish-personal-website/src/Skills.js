@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <section className="skills" id="skills">
       <div className="max-width">
-        <h2 className="title">My Skills</h2>
+        <h2 className="title">Skills</h2>
         <div className="skills-content">
           {/* Programming Languages Card */}
           <div className="card">
