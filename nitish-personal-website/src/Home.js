@@ -1,4 +1,5 @@
 import React from 'react';
+import resumeFile from './assets/Nitish.pdf'; // Adjust the path as necessary
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
           <div className="text-2">Nitish Madabusi</div>
           <div className="text-3">I'm a <span className="typing">Computer Science Student</span></div>
           <div className="text-4"><span>at the University of Toronto</span></div>
-          <a href='https://test.com'>Test</a>
+          <a href={resumeFile} download="Nitish Resume.pdf">Download My Resume</a>
         </div>
       </div>
     </section>
