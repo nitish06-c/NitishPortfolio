@@ -9,22 +9,38 @@ const Experience = () => {
       company: 'PocketHealth',
       location: 'Toronto, ON',
       description: [
+        // {
+        //   project: 'Advanced ML-Driven Automated Appointment Follow-Ups',
+        //   details: ['Designed and developed a resilient, event-driven system using microservices architecture with Azure, C#, Go, MySQL, and Docker, leveraging containerization for scalability and efficient data processing.', 'Developed clients to seamlessly integrate patient observations with our machine learning model and internal microservices.', 'Leveraged OpenAPI specification generation and Goose migrations to maintain up-to-date documentation and enforce consistency across development practices.', 'Designed and implemented comprehensive unit and integration tests to guarantee the seamless operation and reliability of the system with the machine learning model, ensuring thorough validation of all components.'],
+        // },
         {
-          project: 'Advanced ML-Driven Automated Appointment Follow-Ups',
-          details: ['Designed and developed a resilient, event-driven system using microservices architecture with Azure, C#, Go, MySQL, and Docker, leveraging containerization for scalability and efficient data processing.', 'Developed clients to seamlessly integrate patient observations with our machine learning model and internal microservices.', 'Leveraged OpenAPI specification generation and Goose migrations to maintain up-to-date documentation and enforce consistency across development practices.', 'Designed and implemented comprehensive unit and integration tests to guarantee the seamless operation and reliability of the system with the machine learning model, ensuring thorough validation of all components.'],
+            project: 'Advanced ML-Driven Automated Appointment Follow-Ups',
+            details: ['Designed and developed an advanced ML-driven appointment follow-up system using Azure, C#, Go, MySQL, and Docker, integrating patient data with machine learning models and ensuring system reliability through comprehensive testing and up-to-date documentation.'],
         },
+        // {
+        //   project: 'External Logging and Alerting Infrastructure for Core Provider Services',
+        //   details: ['Architected and implemented an efficient, compliance-friendly logging solution using Azure and C# to enhance observability of on-premise applications, significantly reducing investigation time for bugs and improving system monitoring.', 'Developed a real-time notification framework integrating Azure Container logs with Prometheus in the Log Analytics Workspace, improving communication, response times, patient care, and operational efficiency.'],
+        // },
         {
-          project: 'External Logging and Alerting Infrastructure for Core Provider Services',
-          details: ['Architected and implemented an efficient, compliance-friendly logging solution using Azure and C# to enhance observability of on-premise applications, significantly reducing investigation time for bugs and improving system monitoring.', 'Developed a real-time notification framework integrating Azure Container logs with Prometheus in the Log Analytics Workspace, improving communication, response times, patient care, and operational efficiency.'],
+            project: 'External Logging and Alerting Infrastructure for Core Provider Services',
+            details: ['Architected and implemented a compliance-friendly logging solution using Azure and C# for improved observability of on-premise applications, and developed a real-time notification framework integrating Azure Container logs with Prometheus, enhancing system monitoring, communication, and operational efficiency.'],
         },
+        // {
+        //   project: 'Secure Healthcare Data Integration',
+        //   details: ['Contributed to the development of a secure HL7 interface engine over TCP/IP, implementing Health Level Seven (HL7) standards for confidential healthcare data exchange, impacting 1.7M+ patients across 150+ providers', 'Refined the HL7 interface in C# by integrating new message classes, broadening support for additional healthcare providers, and optimizing data transmission. Developed sample resources to facilitate HL7 message ingestion testing for the engineering team.', 'Refined the HL7 interface in C# by integrating new message classes, broadening support for additional healthcare providers, and optimizing data transmission. Developed sample resources to facilitate HL7 message ingestion testing for the engineering team.'],
+        // },
         {
-          project: 'Secure Healthcare Data Integration',
-          details: ['Contributed to the development of a secure HL7 interface engine over TCP/IP, implementing Health Level Seven (HL7) standards for confidential healthcare data exchange, impacting 1.7M+ patients across 150+ providers', 'Refined the HL7 interface in C# by integrating new message classes, broadening support for additional healthcare providers, and optimizing data transmission. Developed sample resources to facilitate HL7 message ingestion testing for the engineering team.', 'Refined the HL7 interface in C# by integrating new message classes, broadening support for additional healthcare providers, and optimizing data transmission. Developed sample resources to facilitate HL7 message ingestion testing for the engineering team.'],
+            project: 'Secure Healthcare Data Integration',
+            details: ['Contributed to the development of a secure HL7 interface engine over TCP/IP for confidential healthcare data exchange, impacting 1.7M+ patients across 150+ providers, and refined the HL7 interface in C# by integrating new message classes, broadening support for additional healthcare providers, and optimizing data transmission, along with developing sample resources for HL7 message ingestion testing.'],
         },
         {
           project: 'Efficient Automated Appointment Communications',
-          details: [' Implemented a reliable system to automate the opt-out process for appointment reminders, managing over 2,500 messages between patient and provider systems and Customer.IO.', 'Streamlined hospital staff operations by enhancing the appointment reminders dashboard with advanced filtering, sorting, and pagination in Angular, optimizing user management and visibility.'],
+          details: ['Implemented a reliable system to automate the opt-out process for appointment reminders, managing over 2,500 messages between patient and provider systems and Customer.IO, and streamlined hospital staff operations by enhancing the appointment reminders dashboard with advanced filtering, sorting, and pagination in Angular.'],
         },
+        // {
+        //     project: 'Efficient Automated Appointment Communications',
+        //     details: ['Contributed to the development of a secure HL7 interface engine over TCP/IP for confidential healthcare data exchange, impacting 1.7M+ patients across 150+ providers, and refined the HL7 interface in C# by integrating new message classes, broadening support for additional healthcare providers, and optimizing data transmission, along with developing sample resources for HL7 message ingestion testing.'],
+        // },
       ],
     },
     {

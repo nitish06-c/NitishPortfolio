@@ -52,9 +52,9 @@ const Navbar = () => {
           <ul className={`menu ${isMenuActive ? 'active' : ''}`}>
             <li><a href="#home" className="menu-btn">Home</a></li>
             <li><a href="#about" className="menu-btn">About</a></li>
+            <li><a href="#experience" className="menu-btn">Experience</a></li>
             <li><a href="#skills" className="menu-btn">Skills</a></li>
             <li><a href="#projects" className="menu-btn">Projects</a></li>
-            <li><a href="#experience" className="menu-btn">Experience</a></li>
             <li><a href="#contact" className="menu-btn">Contact</a></li>
           </ul>
           <div className="menu-btn" onClick={toggleMenu}>
