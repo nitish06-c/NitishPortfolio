@@ -30,7 +30,7 @@ const Projects = () => {
               </div>
             </a>
           </div>
-          {/* Add more project cards as needed */}
+          {/* TODO: Add more projects as you keep updating */}
         </div>
       </div>
     </section>

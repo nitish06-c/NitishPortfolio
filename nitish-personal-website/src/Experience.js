@@ -67,7 +67,19 @@ const Experience = () => {
           },
         ],
       },
-    // Add more experiences here
+      {
+        date: 'May 2021 - August 2021',
+        title: 'Technology Support Analyst',
+        company: 'Ontario Institute for Studies in Education',
+        location: 'Toronto, ON',
+        description: [
+          {
+            project: 'Zoom Support and Virtual Drop-ins',
+            details: ['Enhanced virtual teaching infrastructure by scaling up Zoom licensing for sessional instructors at the Education Commons in OISE. Provided expert assistance in virtual drop-in sessions, resolving software issues and collaborating with team members to ensure optimal service delivery.'],
+          },
+        ],
+      },
+      // Can add more experiences as needed
   ];
 
   return (
