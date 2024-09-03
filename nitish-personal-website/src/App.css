@@ -26,7 +26,7 @@ html {
 }
 .navbar.sticky {
     padding: 30px 0;
-    background: #003f6c; /* Dark blue background */
+    background: #003f6c;
 }
 .navbar .max-width {
     display: flex;
@@ -39,7 +39,7 @@ html {
     font-weight: 600;
 }
 .navbar .logo a span {
-    color: #87ceeb; /* Sky blue */
+    color: #87ceeb;
 }
 .navbar.sticky .logo a span {
     color: #fff;
@@ -58,20 +58,20 @@ html {
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover {
-    color: #87ceeb; /* Sky blue */
+    color: #87ceeb;
 }
 
 /* Home section styling */
 .home {
   display: flex;
-  background: url('unnamed (5).jpg') no-repeat center center; /* Ensure the image path is correct */
-  background-size: 100%; /* Adjusted to zoom out further */
+  background: url('unnamed (5).jpg') no-repeat center center;
+  background-size: 100%;
   background-attachment: fixed;
   height: 100vh;
   min-height: 500px;
   color: #fff;
   font-family: 'Ubuntu', sans-serif;
-  position: relative; /* Add relative positioning for overlay */
+  position: relative;
 }
 
 .home::before {
@@ -81,22 +81,22 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay with some transparency */
-  z-index: 1; /* Ensure overlay is above the image but below the text */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .home .max-width {
-  position: relative; /* Ensure the content is above the overlay */
-  z-index: 2; /* Content should be above the overlay */
+  position: relative;
+  z-index: 2;
   margin: auto 0 auto 40px;
-  padding: 20px; /* Add some padding */
+  padding: 20px;
 }
 
 .home .home-content .text-1,
 .home .home-content .text-2,
 .home .home-content .text-3,
 .home .home-content .text-4 {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Black shadow for better text readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .home .home-content .text-1 {
@@ -122,26 +122,26 @@ html {
 
 .home .home-content a {
   display: inline-block;
-  background: #003f6c; /* Darker blue background */
+  background: #003f6c;
   font-size: 25px;
   color: white;
   padding: 12px 36px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid #003f6c; /* Darker blue border */
+  border: 2px solid #003f6c;
   transition: all 0.3s ease;
 }
 
 .home .home-content a:hover {
-  color: #003f6c; /* Darker blue text */
+  color: #003f6c;
   background: none;
-  border: 2px solid #003f6c; /* Darker blue border */
+  border: 2px solid #003f6c;
 }
 
 
 /* Adjust padding for each section */
 section {
-  padding-top: 80px; /* Adjust this value to the height of your sticky navbar */
+  padding-top: 80px;
   position: relative;
 }
 
@@ -162,24 +162,24 @@ section .title::before {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: #003f6c; /* Dark blue for underline */
+  background: #003f6c;
   transform: translateX(-50%);
 }
 
 section .title::after {
   position: absolute;
-  bottom: -30px; /* Adjusted position to be below the title */
+  bottom: -30px;
   left: 50%;
   font-size: 20px;
-  color: #87ceeb; /* Sky blue for title */
+  color: #87ceeb;
   padding: 5px;
-  /* Remove background color */
   transform: translateX(-50%);
 }
+
 /* About section */
 .about {
-  padding: 60px 0; /* Add padding to the top and bottom of the section */
-  background: #f4f4f4; /* Light gray background for the about section */
+  padding: 60px 0;
+  background: #f4f4f4;
 }
 
 .about .title {
@@ -187,7 +187,7 @@ section .title::after {
   text-align: center;
   font-size: 40px;
   font-weight: 500;
-  margin-bottom: 40px; /* Reduced margin for better spacing */
+  margin-bottom: 40px;
   padding-bottom: 20px;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -199,16 +199,16 @@ section .title::after {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: #00274d; /* Darker blue for underline */
+  background: #00274d;
   transform: translateX(-50%);
 }
 
 .about .title::after {
   position: absolute;
-  bottom: -30px; /* Adjusted position to be below the title */
+  bottom: -30px;
   left: 50%;
   font-size: 20px;
-  color: #1e3a6b; /* Slightly lighter blue for title */
+  color: #1e3a6b;
   padding: 5px;
   transform: translateX(-50%);
 }
@@ -216,112 +216,113 @@ section .title::after {
 .about .about-content {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Center-align items vertically */
-  gap: 30px; /* Add spacing between columns */
+  align-items: center;
+  gap: 30px;
 }
 
 .about .about-content .left {
-  flex: 1; /* Allows image column to flex */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Center image horizontally */
+  justify-content: center;
 }
 
 .about .about-content .left img {
-  max-width: 250px; /* Reduced maximum width */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 250px;
+  height: auto;
   object-fit: cover;
   border-radius: 6px;
 }
 
 .about .about-content .right {
-  flex: 1; /* Allows text column to flex */
+  flex: 1;
 }
 
 .about .about-content .right .intro {
-  font-size: 18px; /* Adjust font size for readability */
-  font-weight: 400; /* Normal weight for text */
-  color: #00274d; /* Darker blue text */
-  line-height: 1.6; /* Improve readability */
-  margin-bottom: 20px; /* Space below text */
+  font-size: 18px;
+  font-weight: 400;
+  color: #00274d;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .about .about-content .right .intro span {
-  color: #1e3a6b; /* Slightly lighter blue for emphasis */
-  font-weight: 600; /* Bold for emphasis */
+  color: #1e3a6b;
+  font-weight: 600;
 }
 
 .about .about-content .right a {
   display: inline-block;
-  background: #00274d; /* Darker blue background */
+  background: #00274d;
   font-size: 20px;
   font-weight: 500;
   color: white;
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid #00274d; /* Darker blue border */
+  border: 2px solid #00274d;
   transition: all 0.3s ease;
-  text-decoration: none; /* Remove underline from link */
+  text-decoration: none;
 }
 
 .about .about-content .right a:hover {
-  color: #00274d; /* Darker blue text */
+  color: #00274d;
   background: none;
-  border: 2px solid #00274d; /* Darker blue border */
+  border: 2px solid #00274d;
 }
 
 @media (max-width: 768px) {
   .about .about-content {
-    flex-direction: column; /* Stack columns vertically */
+    flex-direction: column;
   }
 
   .about .about-content .left,
   .about .about-content .right {
-    width: 100%; /* Full width for smaller screens */
+    width: 100%;
   }
 
   .about .about-content .left img {
-    max-width: 100%; /* Adjust image size to fit the container */
+    max-width: 100%;
   }
 }
+
 /* Projects styling */
 .projects {
-  color: #333; /* Dark text color */
-  background: #f4f4f4; /* Light gray background */
+  color: #333;
+  background: #f4f4f4;
   padding: 40px 20px;
-  text-align: center; /* Center align the entire section */
+  text-align: center;
 }
 
 .projects .title {
   font-size: 40px;
   font-weight: 500;
-  margin-bottom: 40px; /* Spacing under title */
+  margin-bottom: 40px;
   position: relative;
   font-family: 'Ubuntu', sans-serif;
-  display: inline-block; /* Allow title to be centered with underline */
+  display: inline-block;
 }
 
 .projects .title::before {
   content: "";
   position: absolute;
-  bottom: -10px; /* Position the line closer to the title */
+  bottom: -10px;
   left: 50%;
-  width: 180px; /* Set a fixed width for the underline */
+  width: 180px;
   height: 3px;
-  background: #003f6c; /* Dark blue for underline */
-  transform: translateX(-50%); /* Center the underline */
+  background: #003f6c;
+  transform: translateX(-50%);
 }
 
 .projects .projects-content {
   display: flex;
-  gap: 20px; /* Gap between project cards */
-  justify-content: center; /* Center-align project cards */
+  gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .projects .project-card {
-  flex: 0 1 calc(33% - 20px); /* Ensure cards are in a row with equal spacing */
-  background: #ADD8E6; /* Light blue background for project cards */
+  flex: 0 1 calc(33% - 20px);
+  background: #ADD8E6;
   text-align: center;
   border-radius: 6px;
   padding: 15px;
@@ -332,45 +333,38 @@ section .title::after {
 
 .projects .project-card:hover {
   transform: scale(1.05);
-  background-color: #003f6c; /* Dark blue background on hover */
+  background-color: #003f6c;
 }
 
-.projects .project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-}
-
-.projects .project-card h3 {
+.projects .project-info h3 {
   font-size: 20px;
   font-weight: 500;
   margin: 15px 0 7px;
-  color: #87ceeb; /* Sky blue text */
+  color: #333;
 }
 
-.projects .project-card p {
-  color: #666; /* Lighter text color */
+.projects .project-info p {
+  color: #666;
 }
 
-.projects .project-card:hover h3,
-.projects .project-card:hover p {
-  color: #fff; /* White text color on hover */
+.projects .project-card:hover .project-info h3,
+.projects .project-card:hover .project-info p {
+  color: #fff;
 }
 
 
 /* Skills section styling */
 .skills {
-  color: #333; /* Dark text color */
-  background: #a9a9a9; /* Light gray background */
-  padding: 60px 0; /* Add padding to the top and bottom of the section */
+  color: #333;
+  background: #a9a9a9;
+  padding: 60px 0;
 }
 
 .skills .title {
   text-align: center;
   font-size: 40px;
   font-weight: 500;
-  margin-bottom: 40px; /* Reduced margin for better spacing */
+  margin-bottom: 40px;
   position: relative;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -382,73 +376,73 @@ section .title::after {
   left: 50%;
   width: 130px;
   height: 3px;
-  background: #003f6c; /* Dark blue for underline */
+  background: #003f6c;
   transform: translateX(-50%);
 }
 
 .skills .skills-content {
   display: flex;
-  gap: 30px; /* Add spacing between cards */
-  justify-content: center; /* Center-align cards horizontally */
-  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .skills .skills-content .card {
-  flex: 0 0 calc(33.33% - 30px); /* Each card takes up 1/3 of the row, minus the gap */
-  margin: 0; /* Remove margin to avoid extra space */
-  background: #fff; /* White background color */
+  flex: 0 0 calc(33.33% - 30px);
+  margin: 0;
+  background: #fff;
   border-radius: 8px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background color and shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
-  overflow: hidden; /* Ensure content doesn't overflow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skills .skills-content .card .box {
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  transition: transform 0.3s ease;
 }
 
 .skills .skills-content .card:hover .box {
-  transform: scale(1.05); /* Slight scale on hover */
+  transform: scale(1.05);
 }
 
 .skills .skills-content .card i {
-  font-size: 50px; /* Larger icon size */
-  color: #003f6c; /* Dark blue color before hover */
-  transition: color 0.3s ease; /* Smooth transition for icon color */
+  font-size: 50px;
+  color: #003f6c;
+  transition: color 0.3s ease;
 }
 
 .skills .skills-content .card:hover i {
-  color: #007bff; /* Blue color on hover */
+  color: #007bff;
 }
 
 .skills .skills-content .card .text {
-  font-size: 20px; /* Slightly larger text size */
+  font-size: 20px;
   font-weight: 600;
-  color: #003f6c; /* Dark blue text color before hover */
-  margin-top: 10px; /* Space between icon and text */
-  transition: color 0.3s ease; /* Smooth transition for text color */
+  color: #003f6c;
+  margin-top: 10px;
+  transition: color 0.3s ease;
 }
 
 .skills .skills-content .card:hover .text {
-  color: #007bff; /* Blue text color on hover */
+  color: #007bff;
 }
 
 .skills .skills-content .card p {
-  color: #333; /* Dark text color before hover */
-  transition: color 0.3s ease; /* Smooth transition for text color */
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .skills .skills-content .card:hover p {
-  color: #007bff; /* Blue text color on hover */
+  color: #007bff;
 }
 
 /* Experience styling */
 .experience {
   padding: 50px 0;
-  background-color: #f4f4f4; /* Light gray background */
+  background-color: #f4f4f4;
 }
 
 .max-width {
@@ -471,7 +465,7 @@ section .title::after {
   left: 50%;
   width: 320px;
   height: 3px;
-  background: #003f6c; /* Dark blue for underline */
+  background: #003f6c;
   transform: translateX(-50%);
 }
 
@@ -502,7 +496,7 @@ section .title::after {
   left: 0;
   width: 16px;
   height: 16px;
-  background-color: #003f6c; /* Dark blue color */
+  background-color: #003f6c;
   border-radius: 50%;
   top: 0;
 }
@@ -525,33 +519,46 @@ section .title::after {
   font-size: 18px;
 }
 
+.timeline-content .company {
+  font-size: 15px;
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.timeline-content .location {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
 .timeline-content ul {
   margin: 10px 0 0;
-  padding-left: 20px; /* Add left padding to create spacing for bullet points */
-  list-style-type: none; /* Remove bullet points for main list */
+  padding-left: 20px;
+  list-style-type: none;
 }
 
 .timeline-content > ul > li {
-  margin-bottom: 10px; /* Space between main items */
-  font-size: 14px; /* Font size for main list items */
-  color: #003f6c; /* Dark blue color for the project title */
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #003f6c;
 }
 
 .timeline-content > ul > li strong {
-  display: block; /* Makes the project title bold and on a new line */
-  margin-bottom: 5px; /* Space between project title and details */
+  display: block;
+  margin-bottom: 5px;
 }
 
 .timeline-content ul ul {
-  padding-left: 15px; /* Indent the nested list */
-  list-style-type: none; /* Remove bullet points for nested list */
+  padding-left: 15px;
+  list-style-type: none;
 }
 
-.timeline-content ul ul li {
-  font-size: 14px; /* Font size for details */
-  line-height: 1.6; /* Line height for better readability */
-  color: #666; /* Lighter text color for details */
-  margin-bottom: 5px; /* Space between details */
+.timeline-content ul ul li.experience-detail {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 5px;
 }
 
 
@@ -567,7 +574,7 @@ section .title::after {
     position: fixed;
     height: 45px;
     width: 42px;
-    background: #003f6c; /* Dark blue background */
+    background: #003f6c;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -590,7 +597,7 @@ section .title::after {
 /* Contact section styling */
 .contact {
   padding: 60px 20px;
-  background-color: #f4f4f4; /* Light gray background */
+  background-color: #f4f4f4;
 }
 
 .contact .title {
@@ -602,12 +609,12 @@ section .title::after {
 .contact .title::before {
   content: "";
   position: absolute;
-  bottom: -10px; /* Position the line closer to the title */
+  bottom: -10px;
   left: 50%;
-  width: 180px; /* Set a fixed width for the underline */
+  width: 180px;
   height: 3px;
-  background: #003f6c; /* Dark blue for underline */
-  transform: translateX(-50%); /* Center the underline */
+  background: #003f6c;
+  transform: translateX(-50%);
 }
 
 .contact .contact-content {
@@ -653,11 +660,11 @@ section .title::after {
 
 .contact .info-row .info .info-title {
   font-weight: 600;
-  color: #003f6c; /* Dark blue */
+  color: #003f6c;
 }
 
 .contact .info-row .info .info-detail {
-  color: #666; /* Darker text color for details */
+  color: #666;
 }
 
 .contact .column.right {
@@ -688,7 +695,7 @@ section .title::after {
 
 .contact .field input:focus,
 .contact .field textarea:focus {
-  border-color: #87ceeb; /* Sky blue border on focus */
+  border-color: #87ceeb;
 }
 
 .contact .button {
@@ -700,8 +707,8 @@ section .title::after {
   color: #fff;
   width: 180px;
   height: 45px;
-  border: 2px solid #003f6c; /* Dark blue border */
-  background: #003f6c; /* Dark blue background */
+  border: 2px solid #003f6c;
+  background: #003f6c;
   border-radius: 6px;
   font-size: 18px;
   font-weight: 400;
@@ -710,7 +717,7 @@ section .title::after {
 }
 
 .contact .button button:hover {
-  color: #003f6c; /* Dark blue text */
-  background: #fff; /* White background */
-  border-color: #003f6c; /* Dark blue border */
+  color: #003f6c;
+  background: #fff;
+  border-color: #003f6c;
 }

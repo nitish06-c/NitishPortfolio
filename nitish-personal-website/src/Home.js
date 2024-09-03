@@ -1,5 +1,5 @@
 import React from 'react';
-import resumeFile from './assets/Nitish.pdf'; // Adjust the path as necessary
+import resumeFile from './assets/Nitish_Madabusi_Res.pdf'; // Adjust the path as necessary
 
 const Home = () => {
   return (
