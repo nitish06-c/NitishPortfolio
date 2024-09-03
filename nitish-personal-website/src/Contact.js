@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+  
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      e.target,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    ).then(
+      (result) => {
+        console.log(result.text);
+        alert('Message sent successfully!');
+      },
+      (error) => {
+        console.error(error.text);
+        alert('Failed to send message, please try again.');
+      }
+    );
+}
+
   return (
     <section className="contact" id="contact">
       <div className="max-width">
@@ -36,20 +68,49 @@ const Contact = () => {
           </div>
           <div className="column right">
             <div className="text">Message Me</div>
-            <form action="#">
+            <form onSubmit={sendEmail}>
               <div className="fields">
                 <div className="field">
-                  <input type="text" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="field">
-                  <input type="email" placeholder="Email" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
               </div>
               <div className="field">
-                <input type="text" placeholder="Subject" required />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               <div className="field">
-                <textarea cols="30" rows="10" placeholder="Write your message..."></textarea>
+                <textarea
+                  cols="30"
+                  rows="10"
+                  name="message"
+                  placeholder="Write your message..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
               </div>
               <div className="button">
                 <button type="submit">Send Message</button>
