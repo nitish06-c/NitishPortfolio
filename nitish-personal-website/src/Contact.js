@@ -15,24 +15,27 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
   
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      e.target,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    ).then(
-      (result) => {
-        console.log(result.text);
-        alert('Message sent successfully!');
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      (error) => {
-        console.error(error.text);
-        alert('Failed to send message, please try again.');
-      }
-    );
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+    });
+  
+    if (response.ok) {
+      alert('Message sent successfully!');
+    } else {
+      alert('Failed to send message, please try again.');
+    }
 }
 
   return (
