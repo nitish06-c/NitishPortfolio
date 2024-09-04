@@ -8,11 +8,6 @@ export default async function handler(req, res) {
     const templateId = process.env.EMAILJS_TEMPLATE_ID;
     const userId = process.env.EMAILJS_USER_ID;
 
-    // Ensure all required environment variables are available
-    if (!serviceId || !templateId || !userId) {
-      return res.status(500).json({ message: 'Missing required environment variables' });
-    }
-
     const templateParams = {
       from_name: name,
       from_email: email,
@@ -29,15 +24,16 @@ export default async function handler(req, res) {
       });
 
       if (response.status === 200) {
-        return res.status(200).json({ message: 'Email sent successfully' });
+        res.status(200).json({ message: 'Email sent successfully' });
       } else {
-        return res.status(500).json({ message: 'Email sending failed', error: response.data });
+        console.error('Email sending failed', response.data);
+        res.status(500).json({ message: 'Email sending failed', error: response.data });
       }
     } catch (error) {
-      console.error('Error sending email:', error.response ? error.response.data : error.message);
-      return res.status(500).json({ message: 'Email sending failed', error: error.message });
+      console.error('Error:', error.message, error.response?.data);
+      res.status(500).json({ message: 'Email sending failed', error: error.message });
     }
   } else {
-    return res.status(405).json({ message: 'Only POST requests are allowed' });
+    res.status(405).json({ message: 'Only POST requests allowed' });
   }
 }
