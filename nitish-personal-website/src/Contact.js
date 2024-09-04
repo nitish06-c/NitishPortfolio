@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faUser, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Import icons
-import emailjs from 'emailjs-com';
-
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,28 +14,27 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-  const sendEmail = (e) => {
-  e.preventDefault();
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-  emailjs.sendForm(
-    process.env.REACT_APP_EMAILJS_SERVICE_ID,
-    process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-    e.target,
-    process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-  ).then(
-    (result) => {
-      console.log(result.text);
-      alert('Message sent successfully!');
-    },
-    (error) => {
-      console.error(error.text);
-      alert('Failed to send message, please try again.');
+      if (response.ok) {
+        alert('Message sent successfully!');
+      } else {
+        alert('Failed to send message, please try again.');
+      }
+    } catch (error) {
+      alert('Error occurred. Please try again.');
     }
-  );
-};
-
-  
+  };
 
   return (
     <section className="contact" id="contact">
@@ -47,7 +44,7 @@ const Contact = () => {
           <div className="column left">
             <p className="intro">Feel free to reach out to me using the details below or through the contact form.</p>
             <div className="icons">
-            <div className="info-row">
+              <div className="info-row">
                 <FontAwesomeIcon icon={faUser} size="2x" />
                 <div className="info">
                   <div className="info-title">Name</div>
