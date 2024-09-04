@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
+import { faUser, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Import icons
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -42,7 +45,27 @@ const Contact = () => {
           <div className="column left">
             <p className="intro">Feel free to reach out to me using the details below or through the contact form.</p>
             <div className="icons">
-              {/* Icons and contact details */}
+            <div className="info-row">
+                <FontAwesomeIcon icon={faUser} size="2x" />
+                <div className="info">
+                  <div className="info-title">Name</div>
+                  <div className="info-detail">Nitish Madabusi</div>
+                </div>
+              </div>
+              <div className="info-row">
+                <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" />
+                <div className="info">
+                  <div className="info-title">Location</div>
+                  <div className="info-detail">Toronto, Ontario</div>
+                </div>
+              </div>
+              <div className="info-row">
+                <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                <div className="info">
+                  <div className="info-title">Email Address</div>
+                  <div className="info-detail">nit.madabusi@gmail.com</div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="column right">
