@@ -6,11 +6,7 @@ export default async function handler(req, res) {
 
     const serviceId = process.env.EMAILJS_SERVICE_ID;
     const templateId = process.env.EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.EMAILJS_PUBLIC_KEY;
-
-    console.log('Service ID:', serviceId);
-    console.log('Template ID:', templateId);
-    console.log('Public Key:', publicKey);  // Log to check if the values are correct
+    const publicKey = process.env.EMAILJS_PUBLIC_KEY; // public key remains secure on the backend
 
     if (!serviceId || !templateId || !publicKey) {
       return res.status(500).json({ message: 'Missing environment variables' });
@@ -34,7 +30,7 @@ export default async function handler(req, res) {
       if (response.status === 200) {
         res.status(200).json({ message: 'Email sent successfully' });
       } else {
-        res.status(500).json({ message: 'Email sending failed', error: response });
+        res.status(500).json({ message: 'Email sending failed', error: response.data });
       }
     } catch (error) {
       console.error('Error sending email:', error.message);

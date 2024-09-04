@@ -17,7 +17,7 @@ const Contact = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -26,7 +26,7 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-
+  
       if (response.ok) {
         alert('Message sent successfully!');
       } else {
@@ -36,6 +36,7 @@ const Contact = () => {
       alert('Error occurred. Please try again.');
     }
   };
+  
 
   return (
     <section className="contact" id="contact">
