@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
-import { faUser, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Import icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +9,8 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+  
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,23 +18,28 @@ const Contact = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('https://formspree.io/f/xqazjqao', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-
+      
       if (response.ok) {
-        alert('Message sent successfully!');
+        setStatus('SUCCESS');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
       } else {
-        alert('Failed to send message, please try again.');
+        setStatus('ERROR');
       }
     } catch (error) {
-      alert('Error occurred. Please try again.');
+      setStatus('ERROR');
     }
   };
 
@@ -116,6 +123,8 @@ const Contact = () => {
               <div className="button">
                 <button type="submit">Send Message</button>
               </div>
+              {status === 'SUCCESS' && <p className="success-message">Message sent successfully!</p>}
+              {status === 'ERROR' && <p className="error-message">Failed to send message. Please try again later.</p>}
             </form>
           </div>
         </div>
