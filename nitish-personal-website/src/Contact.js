@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faUser, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Import icons
+import emailjs from 'emailjs-com';
 
 
 const Contact = () => {
@@ -15,27 +16,27 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
-  
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-  
-      if (response.ok) {
-        alert('Message sent successfully!');
-      } else {
-        alert('Failed to send message, please try again.');
-      }
-    } catch (error) {
-      alert('Error occurred. Please try again.');
+
+  const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    process.env.REACT_APP_EMAILJS_SERVICE_ID,
+    process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+    e.target,
+    process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+  ).then(
+    (result) => {
+      console.log(result.text);
+      alert('Message sent successfully!');
+    },
+    (error) => {
+      console.error(error.text);
+      alert('Failed to send message, please try again.');
     }
-  };
+  );
+};
+
   
 
   return (
