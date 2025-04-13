@@ -15,6 +15,14 @@ const Projects = () => {
             </a>
           </div>
           <div className="project-card">
+            <a href="https://github.com/nitish06-c/StockAI" target="_blank" rel="noopener noreferrer">
+              <div className="project-info">
+                <h3>StockAI</h3>
+                <p>Built a C++ command-line app that fetches real-time stock data and uses GPT to generate market insights, with Dockerized deployment and CI/CD integration.</p>
+              </div>
+            </a>
+          </div>
+          <div className="project-card">
             <a href="https://github.com/nitish06-c/course-project-the-losers-club" target="_blank" rel="noopener noreferrer">
               <div className="project-info">
                 <h3>Card Mania</h3>
