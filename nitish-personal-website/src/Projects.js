@@ -6,19 +6,19 @@ const Projects = () => {
       <div className="max-width">
         <h2 className="title">Projects</h2>
         <div className="projects-content">
+        <div className="project-card">
+            <a href="https://github.com/nitish06-c/StockAI" target="_blank" rel="noopener noreferrer">
+              <div className="project-info">
+                <h3>StockAI</h3>
+                <p>Built a C++ command-line app that fetches real-time stock data and uses GPT to generate market insights, with Dockerized deployment and CI/CD integration.</p>
+              </div>
+            </a>
+          </div>
           <div className="project-card">
             <a href="https://github.com/nitish06-c/team-project-14-healthy-mom-and-child-m" target="_blank" rel="noopener noreferrer">
               <div className="project-info">
                 <h3>Healthy Mom & Child+</h3>
                 <p>Developed a health application with a team of 5 to educate, monitor, and detect health issues for women planning to conceive, those who are pregnant, perinatal women, and their children up to age 12.</p>
-              </div>
-            </a>
-          </div>
-          <div className="project-card">
-            <a href="https://github.com/nitish06-c/StockAI" target="_blank" rel="noopener noreferrer">
-              <div className="project-info">
-                <h3>StockAI</h3>
-                <p>Built a C++ command-line app that fetches real-time stock data and uses GPT to generate market insights, with Dockerized deployment and CI/CD integration.</p>
               </div>
             </a>
           </div>
