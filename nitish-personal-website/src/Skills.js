@@ -13,7 +13,7 @@ const Skills = () => {
             <div className="box">
               <FontAwesomeIcon icon={faCode} size="3x" />
               <div className="text">Programming Languages</div>
-              <p>C#, Go, Python, SQL, Angular, React, Node.js, HTML, CSS, C, Java, LaTeX</p>
+              <p>C#, Go, Python, SQL, Angular, React, Node.js, HTML, CSS, C, C++, Java, LaTeX</p>
             </div>
           </div>
           {/* Technologies & Tools Card */}
@@ -21,7 +21,7 @@ const Skills = () => {
             <div className="box">
               <FontAwesomeIcon icon={faTools} size="3x" />
               <div className="text">Technologies & Tools</div>
-              <p>Git, GitHub, GitLab, .NET, Numpy, Pandas, Matplotlib, MySQL, SQLite, Azure</p>
+              <p>Git, GitHub, GitLab, .NET, Numpy, Pandas, Matplotlib, MySQL, MSSQL, PostgreSQL, SQLite, OpenAPI Specification, OpenAI API, Azure</p>
             </div>
           </div>
           {/* Frameworks & Technologies Card */}
