@@ -2,11 +2,12 @@ import React from 'react';
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
+import Skills from './Skills';
 import Projects from './Projects';
-import Skills from './Skills'
 import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
+import './App.css';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
       <Home />
       <About />
       <Skills />
-      <Experience />
       <Projects />
+      <Experience />
       <Contact />
       <Footer />
     </div>
